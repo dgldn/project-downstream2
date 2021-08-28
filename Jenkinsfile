@@ -15,4 +15,21 @@ pipeline {
             }
         }
     }
+    post {
+        always {
+            echo "This will always run"
+        }
+        success {
+            echo "Runs only when job was successful"
+        }
+        failure {
+            echo "Runs only when job is failed"
+        }
+        unstable {
+            echo "Runs only when pipeline is unstable"
+        }
+        changed {
+            echo "Runs when state has changed"
+        }
+    }
 }
