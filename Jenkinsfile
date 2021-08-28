@@ -7,6 +7,7 @@ pipeline {
                     retry(3) {     
                     sh '''
                     echo hello there
+                    exit 1
                     '''
                     }
                 }
