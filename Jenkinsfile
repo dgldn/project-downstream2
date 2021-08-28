@@ -6,7 +6,7 @@ pipeline {
                 timeout(time:3, unit:'SECONDS') {
                     sh '''
                     echo hello
-                    sleep 5
+                    sleep 60
                     echo done
                     '''
                 }
