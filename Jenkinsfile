@@ -10,6 +10,11 @@ pipeline {
                 pwd
                 '''
             }
+            steps {
+                retry(3) {
+                    sh 'echo hello'
+                }
+            }
         }
     }
 }
